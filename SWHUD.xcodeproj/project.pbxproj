@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88A99A7B7FFB0BE1594938D3 /* Pods_SWHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E01ECCC820DC6E6333FBDC /* Pods_SWHUD.framework */; };
 		E6CD102222BA1451005E9741 /* SWHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD101822BA1450005E9741 /* SWHUD.framework */; };
 		E6CD102722BA1451005E9741 /* SWHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD102622BA1451005E9741 /* SWHUDTests.swift */; };
 		E6CD102922BA1451005E9741 /* SWHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CD101B22BA1450005E9741 /* SWHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3711031108EB15C13A49DCFE /* Pods-SWHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWHUD.debug.xcconfig"; path = "Target Support Files/Pods-SWHUD/Pods-SWHUD.debug.xcconfig"; sourceTree = "<group>"; };
+		56E01ECCC820DC6E6333FBDC /* Pods_SWHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C320ADCD0C22F72E4CD82C /* Pods-SWHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWHUD.release.xcconfig"; path = "Target Support Files/Pods-SWHUD/Pods-SWHUD.release.xcconfig"; sourceTree = "<group>"; };
 		E6CD101822BA1450005E9741 /* SWHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD101B22BA1450005E9741 /* SWHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHUD.h; sourceTree = "<group>"; };
 		E6CD101C22BA1450005E9741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A99A7B7FFB0BE1594938D3 /* Pods_SWHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B150AB66B9DBBCC141CFDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3711031108EB15C13A49DCFE /* Pods-SWHUD.debug.xcconfig */,
+				D3C320ADCD0C22F72E4CD82C /* Pods-SWHUD.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2B0FA52FE4CAB789BF65187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56E01ECCC820DC6E6333FBDC /* Pods_SWHUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E6CD100E22BA1450005E9741 = {
 			isa = PBXGroup;
 			children = (
 				E6CD101A22BA1450005E9741 /* SWHUD */,
 				E6CD102522BA1451005E9741 /* SWHUDTests */,
 				E6CD101922BA1450005E9741 /* Products */,
+				32B150AB66B9DBBCC141CFDE /* Pods */,
+				E2B0FA52FE4CAB789BF65187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +129,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6CD102C22BA1451005E9741 /* Build configuration list for PBXNativeTarget "SWHUD" */;
 			buildPhases = (
+				16D1FBA7C91F14FAFDF3F175 /* [CP] Check Pods Manifest.lock */,
 				E6CD101322BA1450005E9741 /* Headers */,
 				E6CD101422BA1450005E9741 /* Sources */,
 				E6CD101522BA1450005E9741 /* Frameworks */,
@@ -188,6 +214,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16D1FBA7C91F14FAFDF3F175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWHUD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6CD101422BA1450005E9741 /* Sources */ = {
@@ -340,6 +391,7 @@
 		};
 		E6CD102D22BA1451005E9741 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3711031108EB15C13A49DCFE /* Pods-SWHUD.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -350,6 +402,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SWHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,6 +418,7 @@
 		};
 		E6CD102E22BA1451005E9741 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3C320ADCD0C22F72E4CD82C /* Pods-SWHUD.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +429,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SWHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
