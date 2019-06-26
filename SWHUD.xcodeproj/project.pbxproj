@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		88A99A7B7FFB0BE1594938D3 /* Pods_SWHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E01ECCC820DC6E6333FBDC /* Pods_SWHUD.framework */; };
+		E618567222C3041700ED56D8 /* SWHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E618567122C3041700ED56D8 /* SWHUD.swift */; };
 		E6CD102222BA1451005E9741 /* SWHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD101822BA1450005E9741 /* SWHUD.framework */; };
 		E6CD102722BA1451005E9741 /* SWHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD102622BA1451005E9741 /* SWHUDTests.swift */; };
 		E6CD102922BA1451005E9741 /* SWHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CD101B22BA1450005E9741 /* SWHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6CD103322BA1AF2005E9741 /* HUD in Resources */ = {isa = PBXBuildFile; fileRef = E6CD103222BA1AF2005E9741 /* HUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +28,13 @@
 		3711031108EB15C13A49DCFE /* Pods-SWHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWHUD.debug.xcconfig"; path = "Target Support Files/Pods-SWHUD/Pods-SWHUD.debug.xcconfig"; sourceTree = "<group>"; };
 		56E01ECCC820DC6E6333FBDC /* Pods_SWHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C320ADCD0C22F72E4CD82C /* Pods-SWHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWHUD.release.xcconfig"; path = "Target Support Files/Pods-SWHUD/Pods-SWHUD.release.xcconfig"; sourceTree = "<group>"; };
+		E618567122C3041700ED56D8 /* SWHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWHUD.swift; sourceTree = "<group>"; };
 		E6CD101822BA1450005E9741 /* SWHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD101B22BA1450005E9741 /* SWHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHUD.h; sourceTree = "<group>"; };
 		E6CD101C22BA1450005E9741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6CD102122BA1451005E9741 /* SWHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD102622BA1451005E9741 /* SWHUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWHUDTests.swift; sourceTree = "<group>"; };
 		E6CD102822BA1451005E9741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6CD103222BA1AF2005E9741 /* HUD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HUD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		E6CD101A22BA1450005E9741 /* SWHUD */ = {
 			isa = PBXGroup;
 			children = (
-				E6CD103222BA1AF2005E9741 /* HUD */,
+				E618567122C3041700ED56D8 /* SWHUD.swift */,
 				E6CD101B22BA1450005E9741 /* SWHUD.h */,
 				E6CD101C22BA1450005E9741 /* Info.plist */,
 			);
@@ -176,6 +176,7 @@
 				TargetAttributes = {
 					E6CD101722BA1450005E9741 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					E6CD102022BA1451005E9741 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -205,7 +206,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6CD103322BA1AF2005E9741 /* HUD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E618567222C3041700ED56D8 /* SWHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3711031108EB15C13A49DCFE /* Pods-SWHUD.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -414,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Seven.SWHUD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -423,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3C320ADCD0C22F72E4CD82C /* Pods-SWHUD.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -449,6 +453,7 @@
 		E6CD103022BA1451005E9741 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GTWT2P766B;
 				INFOPLIST_FILE = SWHUDTests/Info.plist;
@@ -467,6 +472,7 @@
 		E6CD103122BA1451005E9741 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GTWT2P766B;
 				INFOPLIST_FILE = SWHUDTests/Info.plist;

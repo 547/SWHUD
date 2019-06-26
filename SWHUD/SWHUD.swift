@@ -1,5 +1,5 @@
 //
-//  HUD.swift
+//  SWHUD.swift
 //  SWHUD
 //
 //  Created by Supernova SanDick SSD on 2019/6/19.
