@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SWHUD"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "在 SVProgressHUD 的基础上封装的便利的方法."
 
   # This description is used to generate tags and improve search results.
