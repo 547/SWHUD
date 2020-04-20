@@ -42,4 +42,7 @@ public struct SWHUD {
     public static func dismiss(after delay: TimeInterval = 0, _ completion: (() -> Void)? = nil) {
         SVProgressHUD.dismiss(withDelay: delay, completion: completion)
     }
+    public static func isVisible() {
+        SVProgressHUD.isVisible()
+    }
 }
